@@ -3,7 +3,7 @@ import middleware from "./middleware.js";
 const app = express();
 const port = 3000;
 
-//to parse json body , in restful.http
+//to parse post body and convert to json, in restful.http
 app.use(express.json());
 app.use(middleware());
 
@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
     answer: ans,
   });
 });
-
+//making a loop and it will start the server, it is a app.listen uses a port  to response to requests. its express's webserver.
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
